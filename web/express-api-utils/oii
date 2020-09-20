@@ -1,0 +1,13 @@
+
+app.get('/util/number/minium', (req, res)=>{
+    const input = Number(req.query.input);
+    const result = {
+        action: "minium",
+        input,
+        output: numberMin(input[0], input[1], input[2]),
+    };
+    res.json(result)
+});
+
+
+const numberMin= require('./number.js')
